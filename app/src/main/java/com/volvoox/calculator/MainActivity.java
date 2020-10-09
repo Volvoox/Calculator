@@ -2,20 +2,16 @@ package com.volvoox.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.icu.text.TimeZoneFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
-import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -140,9 +136,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     p = false;
                     addOperator(")");
                     pCount -= 1;
-                    if(pCount == 0) {
+
+                      if(pCount == 0) {
                         calculate();
-                    }
+                      }
                 }
             case R.id.btnMod:
                 addOperator("%");
